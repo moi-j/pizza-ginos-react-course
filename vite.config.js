@@ -17,6 +17,9 @@ export default defineConfig({
   },
   plugins: [TanStackRouterVite(), react()],
   test: {
-    environment: "happy-dom", //which browser environment to use
+    environment: "happy-dom", //which browser environment to use,
+    coverage: {
+      reporter: ["text", "json", "html"],
+    },
   },
 });
